@@ -1,0 +1,22 @@
+<div class="container">
+    <ng-container>
+        <div class="text-center pb-3">
+            <h1>Ajouter une formation</h1>
+        </div>
+        <form (ngSubmit)="onAddTraining()" #trainingForm="ngForm">
+            <div class="form-group py-2">
+                <label for="name">Indiquez le nom de la formation :</label>
+                <input type="text" class="form-control" name="name" required [(ngModel)]="training.name">
+            </div>
+            <div class="form-group py-2">
+                <label for="description">Donner une courte description de la formation :</label>
+                <input type="text" class="form-control" name="description" required [(ngModel)]="training.description">
+            </div>
+            <div class="form-group py-2">
+                <label for="price">Indiquez le prix de la formation</label>
+                <input type="number" class="form-control" name="price" required [(ngModel)]="training.price">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!trainingForm.valid">Enregistrer</button>	
+        </form>
+    </ng-container>
+</div>
