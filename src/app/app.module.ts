@@ -10,6 +10,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTrainingComponent } from './components/add-training/add-training.component';
 import { EditTrainingComponent } from './components/edit-training/edit-training.component';
+import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { EditTrainingComponent } from './components/edit-training/edit-training.
     CartComponent,
     NotFoundComponent,
     AddTrainingComponent,
-    EditTrainingComponent
+    EditTrainingComponent,
+    LoginComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

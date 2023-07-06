@@ -16,7 +16,8 @@ export class TrainingsComponent implements OnInit{
 
   constructor(private cartService : CartService, 
               private apiService : ApiService, 
-              private route : Router) {}
+              private route : Router) {
+  }
   
   ngOnInit(): void {
     this.display();
@@ -26,7 +27,8 @@ export class TrainingsComponent implements OnInit{
     this.apiService.getTrainings().subscribe({
       next: (data) => (this.listTrainings = data.reverse()),
       error: (err) => (this.error = err.message),
-      complete: () => (this.error = null),});
+      complete: () => (this.error = null)
+    });
   }
 
   onAddToCard( training : Training ) {
